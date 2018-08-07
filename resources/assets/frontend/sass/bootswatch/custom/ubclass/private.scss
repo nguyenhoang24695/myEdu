@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.ub-teacher-hot{
+	background : #fff;
+	h3{
+		margin: 20px 0px;
+	}
+}
+.list-teacher{
+	.media-left{
+		a{
+			img{
+				max-width: 100px;
+			}
+		}
+	}
+	.media-body{
+		h4{
+			a{
+				color: #0e76bc;
+				&:hover{
+					color: #333;
+				}
+			}
+		}
+		.nn{
+			font-size: 13px;
+			color: #999999;
+		}
+		.des{
+			font-size: 13px;
+			color: #666;
+		}
+	}
+}
+
+.body-ub-teach{
+	@media only screen and (min-width : 320px) {
+		margin : 15px 0px;
+	}
+	@media only screen and (min-width : 768px) {
+		margin : 30px 0px;
+	}
+}

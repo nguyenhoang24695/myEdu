@@ -1,0 +1,80 @@
+#footer{
+	background-color: #3c3f47;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding:20px 0px;
+
+	ul.list{
+		li{
+			display:inline-block;
+			margin-right: 10px;
+			line-height: 25px;
+
+			a{
+				color:#999999;
+				font-size: 12px;
+
+				&:hover{
+					color:#fff;
+				}
+			}
+		}
+	}
+
+	.line{
+		height:1px;
+		background-color: #5e626d;
+		margin: 12px 0px;
+		display:block;
+	}
+
+	.info-edus{
+		p{
+			color:#999999;
+			font-size: 14px;
+			margin:0;
+			line-height: 20px;
+			i{
+				margin-right: 5px;
+				color:$brand-primary;
+			}
+		}
+	}
+
+	.info-edus-phone{
+		p{
+			margin-right: 20px;
+		}
+	}
+
+	.guide{
+		h4{
+			margin:0;
+		}
+		a{
+			display:block;
+			color:#999;
+			text-align: left;
+			&:hover{
+				color:#fff;
+			}
+		}
+	}
+
+	.info-inline{
+		margin-top: 15px;
+	    border-top: 1px solid #5e626d;
+	    padding-top: 15px;
+		p{
+			display:inline-block;
+		}
+	}
+
+	.logo-x-small{
+		margin: 0 auto;
+	}
+	.logo-f{
+		margin:10px 0px;
+	}
+}

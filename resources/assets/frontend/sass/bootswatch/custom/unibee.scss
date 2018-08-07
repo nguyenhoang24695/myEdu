@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+//Import core
+@import "common";
+@import "header";
+@import "sidebar";
+@import "footer";
+@import "icon";
+
+
+//Import danh sách các trang
+@import "home";
+@import "cate";
+@import "detail";
+@import "course";
+@import "login";
+@import "profile";
+@import "blog";
+@import "lecture";
+@import "video";
+@import "partner";
+@import "landing";
+
+// Fix tạm
+@import "fix_tam";

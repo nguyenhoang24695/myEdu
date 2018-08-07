@@ -1,0 +1,23 @@
+{
+  "name": "unibee_image_service",
+  "version": "1.0.0",
+  "description": "Image service for Unibee project",
+  "main": "index.js",
+  "scripts": {
+    "test": "Testing ..."
+  },
+  "keywords": [
+    "image",
+    "unibee",
+    "image",
+    "service",
+    "hocvt",
+    "stupiddev"
+  ],
+  "author": "HocVT",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "imgr": "^0.10.4"
+  }
+}

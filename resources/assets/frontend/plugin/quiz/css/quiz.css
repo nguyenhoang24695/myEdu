@@ -1,0 +1,182 @@
+/* BASE QUIZ STYLES */
+/* These styles ensure that the necessary elements are hidden for toggling */
+
+/* DO NOT EDIT UNLESS YOU KNOW WHAT YOU ARE DOING!! */
+
+.startQuiz,
+.nextQuestion,
+.backToQuestion,
+.questions li.question,
+.questions li.question .responses,
+.questions li.question .responses .correct,
+.questions li.question .responses .incorrect,
+.quizResults {
+    display: none;
+}
+
+/* If response messages are disabled or only shown on quiz completion,
+   nextQuestion button IS checkAnswer button - so it must be displayed */
+.nextQuestion.checkAnswer {
+    display: block;
+}
+
+ol.questions,
+ul.answers,
+ul.responses,
+ol.questions li,
+ul.answers li,
+ul.responses li {
+    list-style-type: none;
+}
+
+.quizzes-content{
+  background: #fff;
+  text-align: center;
+  font-size: 16px;
+  color: #353535;
+  line-height: 1.5em;
+}
+.quizzes-content ul,
+.quizzes-content ul li{
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width : 768px) {
+    .quizzes-content{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.quizzes-content label,
+.quizzes-content input{
+    margin:0;
+    padding:0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+}
+.quizzes-content label{
+    padding-left: 5px;
+}
+
+/* Accessibility */
+h1.quizName{
+    font-size: 26px;
+    margin: 0 0 10px;
+    color: #0C4569;
+    margin-top: 15px;
+}
+
+.quizName span:first-child {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.startQuiz {
+    display: block;
+    max-width: 150px;
+    margin: 40px auto;
+}
+
+.tryAgain {
+    margin: 20px 0;
+    min-width: 150px;
+}
+
+/* clearfix */
+.quizArea, .quizResults {
+    zoom: 1;
+}
+.quizArea{
+    padding: 0px 20px;
+}
+.quizArea:before, .quizArea:after, .quizResults:before, .quizResults:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+}
+.quizArea:after, .quizResults:after {
+    clear: both;
+}
+
+.questionCount {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.questionCount span {
+    font-weight: bold;
+}
+
+ol.questions {
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
+}
+ol.questions li {
+    margin-left: 0;
+}
+ol.questions li h3{
+    font-size: 18px;
+    margin: 15px 0 10px;
+}
+
+ul.answers {
+    margin: 0px;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+ul.responses li {
+    margin: 10px 20px 20px;
+}
+ul.responses li p span {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+ul.responses li.correct p span {
+    color: #6C9F2E;
+}ul.responses li.incorrect p span {
+    color: #B5121B;
+}
+
+ul.responses li.correct p{
+    margin: 0;
+}
+
+ul.responses li.correct .text-note{
+    font-size: 14px;
+    color: #333;
+}
+
+.quizResults h3 {
+    margin: 0;
+    font-size: 14px;
+}
+.quizResults h3 span {
+    font-weight: bold;
+    font-style: italic;
+}
+.quizResultsCopy {
+    clear: both;
+    margin-top: 20px;
+}
+.quizResultsCopy .text_mess i{
+    font-size: 30px;
+    vertical-align: middle;
+}

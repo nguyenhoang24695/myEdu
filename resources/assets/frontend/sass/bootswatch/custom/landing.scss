@@ -1,0 +1,762 @@
+.navbar-landing{
+  background: #08894c;
+  padding: 10px 0;
+  margin: 0;
+
+  @media only screen and (min-width : 320px) {
+    .navbar-brand{
+      display: block;
+      padding: 0 15px;
+    }
+  }
+
+  .navbar-nav{
+
+
+    @media only screen and (min-width : 320px) {
+
+    }
+
+
+    @media only screen and (min-width : 768px) {
+      margin-left: 60px;
+    }
+
+    > li {
+      > a{
+        color: #fff;
+      }
+    }
+
+    .active{
+      a{
+        background-color: transparent;
+      }
+    }
+
+  }
+
+  .nav-hotline{
+    margin: 5px 0;
+
+    li{
+      > a{
+        padding: 10px;
+
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+
+    .call-line{
+      a{
+
+        @media only screen and (min-width : 320px) {
+          padding: 5px 20px 20px 0;
+        }
+
+        @media only screen and (min-width : 768px) {
+          padding: 5px 20px;
+        }
+
+        span{
+          width: 30px;
+          height: 30px;
+          background: #0fa05b;
+          display: inline-block;
+          border-radius: 100%;
+          text-align: center;
+          line-height: 30px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+  }
+
+}
+
+.btn-bycourse{
+  color: #fff;
+  background: #f8544c;
+  min-width: 190px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+
+  &:hover{
+    background: darken(#f8544c, 8%) !important;
+  }
+}
+
+.box-candi-search{
+  background: #fff;
+
+  .thumbnail-s,.form-search{
+    margin-top: 20px;
+  }
+
+  .thumbnail-s{
+    img{
+      max-width: 100%;
+    }
+  }
+
+  .form-search{
+    text-align: center;
+    @media only screen and (min-width : 320px) {
+      margin: 68px 0;
+    }
+
+    h1,h2{
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    h2{
+      color: #08894c;
+
+      @media only screen and (min-width : 320px) {
+        font-size: 25px;
+      }
+      @media only screen and (min-width : 768px) {
+        font-size: 30px;
+      }
+    }
+
+    h1{
+      color: #f45149;
+      font-weight: bold;
+      @media only screen and (min-width : 320px) {
+        font-size: 28px;
+      }
+      @media only screen and (min-width : 768px) {
+        font-size: 32px;
+      }
+    }
+
+    p{
+      margin:0;
+    }
+
+    .btn-bycourse{
+      @media only screen and (min-width : 320px) {
+        width: 100%;
+      }
+      @media only screen and (min-width : 480px) {
+        width: 320px;
+      }
+    }
+
+  }
+
+}
+
+.box-what{
+  background: #08894c;
+
+  .tips-top,.tips-bottom{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .tips-top{
+    background: url("../img/myedu/landing/head_3.png");
+    @media only screen and (min-width : 320px) {
+      height: 138px;
+      width: 100%;
+    }
+  }
+
+  .tips-bottom{
+    background: url("../img/myedu/landing/head_8.png");
+    @media only screen and (min-width : 320px) {
+      height: 130px;
+      width: 100%;
+    }
+  }
+
+  .tips-body {
+
+    .thumbnail-ball {
+      text-align: center;
+      @media only screen and (min-width : 320px) {
+        margin: 70px 0;
+      }
+      .ball {
+        width: 168px;
+        height: 182px;
+        background: url("../img/myedu/landing/head_4.png");
+        display: table;
+        text-align: center;
+        margin: 0 auto;
+        .count{
+          display: table-cell;
+          vertical-align: middle;
+          color: #08894c;
+          font-size: 30px;
+          font-weight: bold;
+          span{
+            margin-top: -20px;
+            display: block;
+          }
+        }
+      }
+      .caption{
+        color: #fff;
+        padding: 15px 25px;
+        p{
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .question{
+      text-align: center;
+      img{
+        max-width: 100%;
+      }
+    }
+
+    .note-one{
+      color: #fee101;
+      font-size: 30px;
+      text-transform: uppercase;
+      text-shadow: -3px 2px 1px #004816;
+      text-align: center;
+
+      @media only screen and (min-width : 320px) {
+        width: 100%;
+        float: left;
+        line-height: 45px;
+        padding: 0 15px;
+        margin: 50px 0 30px 0;
+      }
+
+      @media only screen and (min-width : 768px) {
+        padding: 0 260px;
+        margin: 30px 0;
+      }
+
+    }
+
+    .note{
+      position: relative;
+      width: 100%;
+      float: left;
+      margin: 10px 0;
+      height: 167px;
+
+      .note-left,.note-right{
+        color:#fff;
+        font-size: 20px;
+        float: left;
+        position: relative;
+
+        p{
+          position: absolute;
+          top: 0;
+          font-size: 25px;
+          width: 100%;
+          text-align: center;
+
+          margin: 0;
+          line-height: 35px;
+          @media only screen and (min-width : 320px) {
+            padding: 11px 0px;
+          }
+          @media only screen and (min-width : 480px) {
+            padding: 11px 90px;
+          }
+        }
+
+      }
+
+      .note-left{
+        height: 93px;
+        margin-top: 20px;
+
+        @media only screen and (min-width : 320px) {
+          background: #1a86f7;
+          img{
+            max-width: 100%;
+          }
+        }
+
+        @media only screen and (min-width : 768px) {
+          background: url("../img/myedu/landing/head_13.png") no-repeat;
+          img{
+            width: 94%;
+            height: 100%;
+          }
+        }
+
+      }
+
+      .note-space{
+        float: left;
+        position: absolute;
+        left: 44%;
+        @media only screen and (min-width : 320px) {
+          display: none;
+        }
+        @media only screen and (min-width : 480px) {
+          display: block;
+        }
+      }
+
+      .note-right{
+        height: 93px;
+        @media only screen and (min-width : 320px) {
+          background: #f1d200;
+          margin-left: 0;
+          margin-top: 0;
+          img{
+            max-width: 100%;
+          }
+
+          p{
+            font-size: 18px;
+          }
+        }
+        @media only screen and (min-width : 768px) {
+          background: url("../img/myedu/landing/head_14.png") no-repeat;
+          margin-left: 15px;
+          margin-top: 41px;
+          p{
+            font-size: 25px;
+          }
+        }
+      }
+
+    }
+
+    .thumbnail-tip{
+      width: 299px;
+      height: 103px;
+      background: url("../img/myedu/landing/head_7.png") no-repeat;
+      margin: 30px auto;
+      text-align: center;
+      display: table;
+      position: relative;
+
+      p{
+        display: table-cell;
+        vertical-align: middle;
+        color: #fff;
+        font-size: 16px;
+        padding: 0 52px;
+        line-height: 25px;
+        span{
+          margin-top: 30px;
+          display: block;
+        }
+      }
+
+      .count{
+        position: absolute;
+        left: 45%;
+        font-size: 16px;
+        padding: 10px 12px;
+        font-weight: bold;
+        color: #08894c;
+      }
+
+    }
+
+    .by-course{
+      margin: 30px 0;
+      @media only screen and (min-width : 320px) {
+        width: 100%;
+      }
+      @media only screen and (min-width : 768px) {
+
+      }
+
+    }
+
+  }
+
+}
+
+.combo{
+  background: #fff;
+
+  h1{
+    text-transform: uppercase;
+    color: #ef3d34;
+    text-align: center;
+    margin: 20px 0;
+
+    @media only screen and (min-width : 320px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @media only screen and (min-width : 768px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+
+  .thumbnail-combo{
+    text-align: center;
+    margin: 20px 0;
+
+    .icon{
+      height: 205px;
+    }
+
+    .caption{
+      color:#252424;
+      font-size: 20px;
+      padding: 15px 60px;
+    }
+
+  }
+}
+
+.profile{
+  background: #dadada;
+  padding: 20px 0;
+
+  .avatar{
+    margin: 60px 0px 0px 0px;
+  }
+
+  h3{
+    text-transform: uppercase;
+    color: #ef3d34;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  ul{
+    li{
+      margin: 10px 0;
+
+      .p-text{
+        color: #616161;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .p-icon{
+        color: #616161;
+        font-size: 10px;
+        text-indent: -15px;
+      }
+
+    }
+  }
+}
+
+.commitment{
+  background: #3e6fbf;
+
+  h3{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  ul{
+    li{
+      background: #fff;
+      padding: 15px 20px;
+      color: #10569f;
+      margin-bottom: 20px;
+      border-radius: 5px;
+
+      .icon{
+        i{
+          font-size: 40px;
+        }
+      }
+
+      .text{
+        vertical-align: top;
+        font-size: 22px;
+        padding-left: 10px;
+        line-height: 38px;
+      }
+    }
+
+    .special{
+      .text{
+        text-align: center;
+        display: inline-block;
+        line-height: 28px;
+        padding-top: 8px;
+      }
+    }
+  }
+
+  .by-course{
+    margin: 30px 0;
+    .btn-bycourse{
+
+      @media only screen and (min-width : 320px) {
+        width: auto;
+      }
+      @media only screen and (min-width : 768px) {
+        width: 300px;
+      }
+    }
+  }
+
+}
+
+.faq{
+  background: #fff;
+  ul{
+    li{
+      margin-bottom: 40px;
+
+      .box{
+        padding: 16px;
+        background: #ef3d34;
+        color: #fff;
+        width: 60%;
+        font-size: 18px;
+        font-weight: normal;
+
+        .arrow-down{
+          width: 28px;
+          height: 31px;
+          background: url("../img/myedu/landing/head_17.png") no-repeat;
+          margin-top: -2px;
+        }
+
+        @media only screen and (min-width : 320px) {
+          width: 100%;
+        }
+        @media only screen and (min-width : 768px) {
+          width: 60%;
+        }
+
+      }
+
+      .text{
+        color: #656565;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .title{
+
+    height: 265px;
+    display: table;
+    text-align: center;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #ef3d34;
+    border-radius: 3px;
+    margin: 70px auto;
+    @media only screen and (min-width : 320px) {
+      width: 250px;
+    }
+    @media only screen and (min-width : 768px) {
+      width: 265px;
+    }
+
+    p{
+      display: table-cell;
+      vertical-align: middle;
+      text-transform: uppercase;
+      font-size: 61px;
+      color: #ef3d34;
+    }
+  }
+
+  .row-faq{
+    margin: 50px 0;
+  }
+
+}
+
+.cod-register{
+  background: #08894c;
+  padding: 30px 0;
+  h2{
+    text-transform: uppercase;
+    span{
+      color: #fff;
+      font-size: 25px;
+    }
+    strong{
+      color: #fffab0;
+      font-size: 25px;
+    }
+  }
+
+  .apply{
+    border-width: 1px;
+    border-color: #fff;
+    border-style: dashed;
+    padding: 20px;
+    max-width: 98%;
+    text-align: center;
+
+    h4{
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .seeding{
+      overflow: hidden;
+      text-align: center;
+      @media only screen and (min-width : 320px) {
+        margin: 0 0;
+      }
+      @media only screen and (min-width : 768px) {
+        margin: 0 75px;
+      }
+
+      .seeding-body{
+        @media only screen and (min-width : 768px) {
+          background: url("../img/myedu/landing/head_19.png") no-repeat;
+          height: 71px;
+          width: 485px;
+        }
+        float: left;
+        padding: 0 10px;
+
+        p{
+          font-size: 20px;
+          color:#fffab0;
+          margin: 0;
+          padding: 14px 10px;
+        }
+      }
+
+    }
+  }
+
+  .box-time{
+    width: 100%;
+    overflow: hidden;
+    margin: 50px 0;
+
+    .timer{
+      float: left;
+      margin: 0 22px;
+
+      .timer-box{
+        width: 140px;
+        height: 140px;
+        text-align: center;
+        display: table;
+        background: #fff;
+        border-radius: 2px;
+
+        .timer-value{
+          display: table-cell;
+          vertical-align: middle;
+          color: #545454;
+          font-size: 45px;
+        }
+
+      }
+      .timer-label{
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+        margin-top: 15px
+      }
+    }
+  }
+
+  .pic-gui{
+    img{
+      max-width: 100%;
+    }
+  }
+
+  .form-cod{
+    background: #ebebeb;
+    margin: 40px 0;
+
+    h2{
+      color: #08894c;
+      font-size: 22px;
+      text-transform: uppercase;
+      padding: 20px;
+      border-bottom: 1px solid #d1d1d1;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    form{
+      padding: 25px;
+    }
+
+  }
+
+  .price-cod{
+    text-align: center;
+    .old-price{
+      color: #fffab0;
+      font-size: 30px;
+      text-shadow: -5px 2px 5px #066b3b;
+      margin: 0;
+      span{
+        text-decoration: line-through;
+      }
+    }
+    .new-price{
+      color: #fffab0;
+      text-shadow: -5px 2px 5px #066b3b;
+      font-size: 35px;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .count-num{
+    margin: 30px 60px;
+
+    .input-group{
+      border: 0;
+      .form-control{
+        border: 0;
+        color: #008144;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .input-group-addon{
+        border: 0;
+        border-left: 3px solid #0a9151;
+        background: #fff;
+        color: #008144;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+.cod-footer{
+  background: #ececec;
+  text-align: center;
+  margin: 20px 0;
+
+  p{
+    margin: 0;
+    color: #6f6f6f;
+    font-size: 15px;
+    line-height: 25px;
+  }
+}

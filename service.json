@@ -1,0 +1,12 @@
+[
+  {
+    "uid": "myedu_convert",
+    "append": true,
+    "workingDir": "/var/www/myedu.com.vn",
+    "l" : "/dev/null",
+    "o" : "/var/www/myedu.com.vn/convert_log.txt",
+    "spinSleepTime" : "30000",
+    "c" : "/usr/local/php5530_fpm/bin/php artisan videos:convert"
+  }
+]
+//forever start -l /dev/null -o /Users/hocvt/Documents/webroot/unibee/convert_log.txt -a --uid "video_converter" --spinSleepTime 10000 -c /Applications/MAMP/bin/php/php5.6.10/bin/php /Users/hocvt/Documents/webroot/unibee/artisan videos:convert

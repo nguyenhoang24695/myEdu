@@ -1,0 +1,26 @@
+@charset "utf-8";
+.logo-small, 
+.logo-small-while {
+	width: 165px !important;
+}
+.logo-x-small{
+	width: 110px !important;
+}
+
+.search-unibee{
+	@media only screen and (min-width : 992px) {
+		.input-group{
+			width:425px;
+		}
+	}
+}
+
+.cat-alpha-hot{
+	background: transparent !important;
+	img{
+		opacity: 1 !important;
+	}
+	&:hover{
+		background: transparent !important;
+	}
+}

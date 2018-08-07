@@ -1,0 +1,87 @@
+{
+  "name": "rappasoft/laravel-5-boilerplate",
+  "description": "The Laravel Framework Boilerplate Project.",
+  "keywords": [
+    "framework",
+    "laravel",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "laravel/framework": "5.1.*",
+    "illuminate/html": "5.*",
+    "laravel/socialite": "~2.0",
+    "twbs/bootstrap": "3.*",
+    "twbs/bootstrap-sass": "3.*",
+    "baum/baum": "~1.1",
+    "fortawesome/font-awesome": "4.*",
+    "hieu-le/active": "~2.0",
+    "laracasts/utilities": "~2.0",
+    "barryvdh/laravel-debugbar": "^2.0",
+    "intervention/image": "^2.3",
+    "graham-campbell/flysystem": "~3.1",
+    "kirkbushell/eloquence": "~1.3",
+    "rtconner/laravel-tagging": "~2.0",
+    "intervention/imagecache": "^2.3",
+    "backup-manager/laravel": "^1.0",
+    "barryvdh/laravel-ide-helper": "^2.2",
+    "cviebrock/eloquent-sluggable": "^3.1",
+    "artesaos/seotools": "v0.7.3.6",
+    "predis/predis": "~1.1@dev",
+    "guzzlehttp/guzzle": "~6.0",
+    "davejamesmiller/laravel-breadcrumbs": "^3.0",
+    "google/apiclient": "1.0.*@beta",
+    "elasticsearch/elasticsearch": "~2.0",
+    "paquettg/php-html-parser": "^1.6",
+    "anhskohbo/no-captcha": "2.*",
+    "php-ffmpeg/php-ffmpeg": "^0.6.1",
+    "elasticquent/elasticquent": "dev-master",
+    "roumen/sitemap": "^2.6",
+    "dingo/api": "1.0.*@dev",
+    "jenssegers/agent": "^2.5"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.4",
+    "laracasts/generators": "~1.1",
+    "doctrine/dbal": "~2.3"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "files": [
+      "app/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php artisan clear-compiled",
+      "php artisan optimize"
+    ],
+    "pre-update-cmd": [
+      "php artisan clear-compiled"
+    ],
+    "post-update-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+      "php artisan ide-helper:generate",
+      "php artisan ide-helper:meta",
+      "php artisan optimize"
+    ],
+    "post-create-project-cmd": [
+      "php -r \"copy('.env.example', '.env');\"",
+      "php artisan key:generate"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist"
+  }
+}

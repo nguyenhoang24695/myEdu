@@ -1,0 +1,207 @@
+@charset "utf-8";
+//**********load background image***************
+$icon-path-default: "../img/common/";
+
+//**********load background image***************
+.icon-all{
+	background: url(#{$icon-path}icon_all.png) repeat;
+}
+
+.bg-home{
+	background: #494C77 url(#{$icon-path}banner.jpg) repeat;
+}
+
+.icon-dollar{
+	background: url(#{$icon-path-default}icon_dola.png) repeat;
+}
+
+.icon-cate{
+	background: url(#{$icon-path-default}/while/icon_cate.png) repeat;
+}
+
+.breadcrumb-parter{
+	background: $brand-primary url(#{$icon-path}breadcrumd_partner.png) no-repeat;
+}
+
+.icon-play{
+	background: url(#{$icon-path-default}/while/play.png) no-repeat;
+}
+
+.unibee-breadcrumb{
+	background: $brand-primary url(#{$icon-path}breadcrumb.png) no-repeat;
+}
+
+.aside-cover{
+	background: url(#{$icon-path}bg_sidebar.png);
+}
+
+//***************************************
+
+.logo-small,
+.logo-small-while{
+	height: 35px;
+    width: 150px;
+    display: inline-block;
+}
+
+.logo-small{
+	background-position: -310px -70px;
+}
+
+.logo-small-while{
+    background-position: -310px -29px;
+}
+
+@media only screen and (max-width : 350px) {
+	.logo-small,
+	.logo-small-while{
+		height: 35px;
+	    width: 35px;
+	    display: inline-block;
+	    background-repeat: no-repeat;
+	    background-position: -320px -141px !important;
+	}
+}
+
+.logo-x-small{
+    width: 100px;
+    height: 22px;
+    background-position: -317px -113px;
+}
+
+//***********Danh mục**************
+.navbar-outline{
+
+	.caret-cat{
+		background-position: -35px -8px;
+	}
+
+	.open{
+		.caret-cat{
+			background-position: -9px -7px;
+		}
+	}
+
+	.dropdown-cate{
+		&:hover{
+			.caret-cat{
+				background-position: -9px -7px;
+			}
+		}
+	}
+
+	.logo-small{
+		background-position: -310px -29px;
+	}
+}
+
+.caret-cat,
+.caret-cat-while{
+	width:15px;
+	height:15px;
+	display: inline-block;
+	vertical-align: text-top;
+	margin-right: 10px;
+}
+
+.caret-cat{
+	background-position: -9px -7px;
+}
+
+.icon-cat{
+	width: 57px;
+    height: 45px;
+	display:block;
+	margin:0 auto;
+}
+.cat-laptop{
+	background-position: -6px 4px;
+}
+.cat-paint{
+    background-position: -6px -39px;
+}
+.cat-skill{
+	background-position: -64px -3px;
+}
+.cat-shopping{
+    background-position: -59px -45px;
+}
+.cat-camera{
+	background-position: -125px -7px;
+}
+.cat-group{
+	background-position: -114px -53px;
+}
+.cat-language{
+	background-position: -11px -95px;
+}
+.cat-money{
+	background-position: -68px -103px;
+}
+.cat-heart{
+	background-position: -124px -103px;
+}
+.cat-board{
+	background-position: -7px -146px;
+}
+.icon-certificate{
+	width: 18px;
+    height: 18px;
+    display:inline-block;
+    background-position: -64px -160px;
+}
+.icon-u-lag,
+.icon-camera-lg,
+.icon-loa-lg,
+.icon-dola-lg{
+	width:60px;
+	height:60px;
+	margin:0 auto;
+}
+.icon-u-lag{
+    background-position: -9px -33px;
+}
+.icon-camera-lg{
+	background-position: -79px -33px;
+    width: 70px;
+}
+.icon-loa-lg{
+	background-position: -152px -33px;
+    width: 65px;
+}
+.icon-dola-lg{
+	background-position: -223px -32px;
+    width: 85px;
+}
+
+/*******Icon mobile***********/
+.m-icon-search,
+.m-icon-user,
+.m-icon-menu{
+	width: 40px;
+    height: 38px;
+    display: block;
+}
+.m-icon-search{
+	background-position: -210px -140px;
+}
+.m-icon-user{
+    background-position: -207px -180px;
+}
+.m-icon-menu{
+	background-position: -210px -95px;
+}
+
+.icon-dollar{
+	width:46px;
+	height:46px;
+	display:inline-block;
+}
+
+.partner-done{
+	.media-left{
+		.done{
+			background-position: -11px -104px;
+		}
+	}
+}

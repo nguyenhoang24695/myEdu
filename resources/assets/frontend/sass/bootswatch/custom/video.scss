@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#studying_view {
+
+}
+
+iframe {
+  border: none;
+}
+
+.preview-notice {
+  height: 30px;
+  background: #3c3f48;
+  color: #fff;
+  display: none;
+}
+
+.lecture-preview {
+  background: #000;
+  .row.preview-container {
+    position: relative;
+  }
+  .lecture_content {
+    height: 100%;
+    width: 100%;
+    padding: 40px 0;
+    @media only screen and (min-width : 320px) {
+      min-width: 320px;
+      min-height: 245px;
+    }
+    @media only screen and (min-width : 480px) {
+      min-width: 480px;
+      min-height: 245px;
+    }
+    @media only screen and (min-width : 768px) {
+      min-height: 360px;
+    }
+  }
+  .top-control {
+    width: 100%;
+    padding: 8px 0 8px 15px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 101;
+    color: #9a9a9a;
+    a {
+      display: inline-block;
+      color: #9a9a9a;
+      @media only screen and (min-width : 320px) {
+        margin-right: 10px;
+      }
+      @media only screen and (min-width : 480px) {
+        margin-right: 50px;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+    .icon-next-back{
+      font-size: 25px;
+      vertical-align: middle;
+    }
+  }
+  .bottom-control {
+    width: 100%;
+    padding: 8px 0 10px 15px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 101;
+    color: #9a9a9a;
+    label {
+      color: #9a9a9a;
+      font-weight: normal;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+      }
+    }
+    a {
+      display: inline-block;
+      color: #9a9a9a;
+
+      @media only screen and (min-width : 320px) {
+        margin-right: 10px;
+      }
+      @media only screen and (min-width : 480px) {
+        margin-right: 50px;
+      }
+      
+
+      &:hover {
+        color: #fff;
+      }
+    }
+    .icon-next-back{
+      font-size: 25px;
+      vertical-align: sub;
+    }
+  }
+
+  .study_status{
+    padding: 0 10px;
+    i{
+      cursor: pointer;
+    }
+  }
+}
+
+.lecture-resource {
+  background: #fff;
+  position: relative;
+  #lecture_discussion {
+    padding: 15px;
+    overflow-y: scroll;
+    height: 100%;
+  }
+  .lecture-resource-toggle {
+    position: absolute;
+    display: none;
+    opacity: 0.6;
+    top: 15px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    left: -15px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: #AAA;
+    text-align: center;
+    font-size: 15px;
+    width: 15px;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+      width: 30px;
+      left: -30px;
+      font-size: 25px;
+    }
+  }
+  ul.studying_tabs {
+    position: relative;
+    z-index: 999;
+    background-color: #fff;
+    li{
+      width: 25%;
+      float:left;
+      a{
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+  ul.studying-public{
+    li{
+      width:50%;
+    }
+  }
+  
+  .inside-full-height {
+    position: relative;
+    @media screen and (min-width: 768px) {
+      .wiget_list_lecture {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding-top: 54px;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+
+.full-parent {
+  height: 100%;
+  width: 100%;
+}
+
+ol.my_sortable {
+  padding-left: 0px;
+}
+
+h4.notes-list-header{
+  padding: 10px;
+}
+
+.list-group-notes {
+
+  .list-group-item {
+    border-left: none;
+    border-right: none;
+    position: relative;
+
+    // Round the first and last items
+    &:first-child {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+    &.saved-item{
+      padding-right: 20px;
+      .note-content{
+
+      }
+      .note-timer{
+        font-size: 90%;
+        color: #999;
+      }
+      .remove-note{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        color: #999;
+        font-size: 18px;
+        &:hover{
+          color:$brand-primary;
+        }
+      }
+    }
+
+    &:hover .remove-note{
+      display: block;
+    }
+    &:hover{
+      background: #f1f1f1;
+    }
+    .editable{
+      border: none;
+      cursor: pointer;
+    }
+    .editable-container{
+      width: 100%;
+      .editable-input{
+        display: block;
+      }
+      .editable-buttons{
+        display: block;
+        padding-top: 5px;
+      }
+      .form-group{
+        display: block;
+        .form-control{
+          width: 100%;
+          height: 100px;
+        }
+      }
+    }
+    .editable-pre-wrapped{
+      white-space: inherit;
+    }
+  }
+  .demo-item{
+    color: #999;
+    cursor: pointer;
+    //border: 1px solid #000;
+    .remove-note {
+      display: none !important;
+    }
+    .note-timer{
+      display: none;
+    }
+  }
+}

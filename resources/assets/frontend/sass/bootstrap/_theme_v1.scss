@@ -1,0 +1,151 @@
+@charset "utf-8";
+@import "variables";
+@import "mixins";
+
+/*!
+ * Bootstrap v3.3.5
+ */
+
+//reset style mặc định bootstrap
+
+/***********Buton***********/
+
+.btn_edus {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+}
+
+.btn_edus_lg {
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+}
+
+.btn_edus_sm {
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+.btn_edus_xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+.btn_edus_primary,
+.btn_edus_warning {
+  @include box-shadow(none);
+  outline: none;
+  border: 0;
+}
+
+.btn_transparent{
+  @include box-shadow(none);
+  outline: none;
+}
+
+.btn_edus_primary {
+  @include button-variant-normalize($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.btn_edus_warning {
+  @include button-variant-normalize($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+
+.btn_transparent{
+  @include button-variant-normalize($btn-transparent-color, $btn-transparent-bg, $btn-transparent-border);
+}
+
+/**********Form*************/
+.form-control {
+  @include box-shadow(none);
+
+  &:focus {
+    outline: none;
+    @include box-shadow(none);
+    border: 1px solid #ccc;
+  }
+}
+
+/*************Blink element**************/
+.blink_me {
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+/**********alert*************/
+.alert{
+  border-radius: 0;
+}
+
+/********Pagination*********/
+
+.pagination > li > a, 
+.pagination > li > span{
+  color: #00a888;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover, 
+.pagination > .active > span:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus
+{
+  background-color: #00a888;
+  border-color: #00a888;
+}
+
+.text-primary{
+  color: $primary;
+}

@@ -1,0 +1,150 @@
+.option{
+	margin: 0px 0px;
+	@media only screen and (min-width : 320px) {
+		float:left;
+		.btn-review-warning{
+			margin: 10px 0px;
+		}
+	}
+	@media only screen and (min-width : 768px) {
+		float:right;
+	}
+	@media only screen and (min-width : 992px) {
+		.btn-review-warning{
+			margin: 0px;
+		}
+	}
+	li{
+		font-size: 12px ;
+	    display: inline-block;
+	    margin-right: 10px;
+	    vertical-align: middle;
+	    a{
+			color: #fff;
+			.fa{
+				font-size: 20px;
+				&:hover{
+					color:#333;
+				}
+			}
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	.use-info .u-name {
+		a,span{
+			color: #fff;
+		}
+		a:hover{
+			color:#333;
+		}
+	}
+	.btn-review-warning{
+		background:#fff;
+		color: #333;
+		
+		&:hover span{
+			color: $brand-primary;
+		}
+	}
+}
+.btn-review-warning{
+	padding: 7px 10px;
+}
+.wrap-course{
+	margin-top: 50px;
+    margin-bottom: 50px;
+}
+.media-course{
+	background-color: #3c3f47;
+    color: #fff;
+    padding: 20px;
+    h3{
+    	font-size: 20px;
+    	margin-bottom: 5px;
+    	a{
+    		color: #fff;
+
+    		&:hover{
+    			color: $brand-primary;
+    		}
+    	}
+    }
+    .play{
+    	margin: 5px 0px;
+    	i{
+    		margin-right: 7px;
+    	}
+    }
+    p{
+    	font-size: 11px;
+    }
+    .process-learn{
+    	background-color: #ffffff;
+    	height: 5px;
+    	.long{
+    		float: left;
+		    height: 100%;
+		    background-color: $brand-primary;
+    	}
+    }
+    .status{
+    	margin-bottom: 10px;
+    }
+}
+.tab-pane-course{
+	background: #fff;
+    padding: 10px;
+}
+.wrap-btn-reviews{
+	width: 100%;
+	margin-bottom: 20px;
+}
+#list-reviews-ap{
+	.list-vote{
+		padding: 10px 20px;
+		border: 1px solid #ddd;
+
+		.review-order{
+			margin:0;
+		}
+	}
+}
+
+.tab-content{
+	border: 1px solid #ddd;
+	border-top: 0;
+}
+.course-relation-regis{
+	padding: 0;
+    margin-top: 20px;
+    border-radius: 0;
+}
+#aside-course{
+	@media only screen and (min-width : 768px) {
+		padding-right: 5px;
+	}
+}
+.public-label{
+  display: none;
+}
+.lock-in-public-label{
+  display: none;
+}
+.public-content{
+  .public-color{
+	color: $brand-success !important;
+  }
+  .public-label{
+	display: inherit;
+	color: #337ab7 !important;
+  }
+  .lock-label{
+	display: none;
+  }
+  .lock-in-public-label{
+	display: inline;
+  }
+}
