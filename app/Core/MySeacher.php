@@ -74,6 +74,7 @@ class MySeacher extends MySearchEngine
                 'cou_active' => 1,
             ]];
         }
+//        dd($query);
         $courses = Course::searchByQuery($query);
 
         $return['total']    = $courses->count();

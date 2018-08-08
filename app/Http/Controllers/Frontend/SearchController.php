@@ -35,27 +35,34 @@ class SearchController extends Controller
             return redirect('/');
         }
 
-        //Tìm kiếm khóa học
-        $courses  =  $this->search->searchCourse($query);
-        if(isset($courses['course'])){
+//        Tìm kiếm khóa học
+//        $courses  =  $this->search->searchCourse($query);
+        $courses  =  Course::where('cou_title',"like", '%'.$query.'%') -> get();
+
+        if(count($courses) > 0){
+
+
             $course_ids = [];
-            foreach($courses['course'] as $course){
+            foreach($courses as $course){
                 $course_ids[] = $course['id'];
             }
+
             $data_course = Course::with('user')
                 ->whereIn('id', $course_ids)
                 ->orderByRaw('FIELD(`id`,' . implode(',', $course_ids) . ')')
                 ->get();
+
 //            dd($data_course);
         } else {
             $data_course = [];
         }
 
         //Tìm kiếm user
-        $users   =   $this->search->searchUser($query);
-        if(isset($users['user'])){
+//        $users   =   $this->search->searchUser($query);
+        $users   =  User::where('name',"like", '%'.$query.'%') -> get();
+        if(count($users)){
             $use_id = [];
-            foreach($users['user'] as $user){
+            foreach($users as $user){
                 $use_id[] = $user['id'];
             }
             $data_user  =   User::whereIn('id', $use_id)->get();
@@ -69,7 +76,7 @@ class SearchController extends Controller
         $tags         =  [];
         $appended     =  [];
 
-        $total        =  $courses['total']+$users['total'];
+        $total        = count($courses)+count($users);
 
         //Kết quả khóa học
         $data['data_course'] = $data_course;
@@ -83,8 +90,8 @@ class SearchController extends Controller
         $data['query']       = $query;
         //Tổng số kết quả trả về
         $data['total']       = $total;
-        $data['total_course']= $courses['total'];
-        $data['total_user']  = $users['total'];
+        $data['total_course']= count($courses);
+        $data['total_user']  = count($users);
         $data['type_s']      = $type_s;
 
         return view('frontend.search.index',$data);

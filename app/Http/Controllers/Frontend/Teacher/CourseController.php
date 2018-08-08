@@ -88,11 +88,11 @@ class CourseController extends TeacherController
      * @return mixed
      */
     public function save(NewCourseRequest $newCourseRequest){
+        $query = ['cou_user_id' => auth()->user()->id]
+	        + $newCourseRequest->only(['cou_title', 'cou_summary', 'cou_cate_id', 'course_tags', 'language']);
 
-        $saved = Course::create(
-        	['cou_user_id' => auth()->user()->id]
-	        + $newCourseRequest->only(['cou_title', 'cou_summary', 'cou_cate_id', 'course_tags', 'language']));
-
+        $saved = Course::create($query);
+//        dd(1);
         $saved->course_tags = $newCourseRequest->get('course_tags');
         $saved->save();
 

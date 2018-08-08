@@ -25,6 +25,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use League\Flysystem\Adapter\Local;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Countable;
 
 /**
  * App\Models\Course
@@ -410,7 +411,8 @@ class Course extends Model implements CountCache, TaggableContract, SluggableInt
         $return  = parent::save($options);
         if($return == true){
             if($this->wasRecentlyCreated){
-                $this->addAllToIndex();
+//                dd($this);
+//                $this->addAllToIndex();
             }else{
                 event(new CourseContentChange($this->id));
             }

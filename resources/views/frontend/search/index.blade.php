@@ -8,6 +8,7 @@
   <div class="container">
     <ol class="breadcrumb">
       <li>
+
         <a href="{{ url('/') }}">
           <i class="fa fa-home"></i>
         </a>
@@ -17,9 +18,11 @@
           Tìm kiếm
         </a>
       </li>
+
       <li class="active">{{ $query }}</li>
     </ol>
     <h3>
+
       <strong style="color:#333">{{ $total }}</strong> kết quả với từ khóa: <strong style="color:#333">“{{ $query }}”</strong>
     </h3>
   </div>
@@ -74,7 +77,7 @@
                     {{--{!! $objReviews->genRatingWithCourse($course->id) !!}--}}
                     {!! genRating($course->rating) !!}({{$course->review_count}})
                   </p>
-                  
+
                   <p class="count-use text-overflow"><i class="fa fa-user"></i> {{ ($course->user_count > 0) ? $course->user_count:"Đang chờ " }} học viên</p>
                   <p class="line-break"></p>
                   <div class="use-info use-info-small">
@@ -106,13 +109,13 @@
                 </a>
                 <p class="u-name">
                   <a href="{{ $user->showLinkProfile() }}" title="{{ $user->name }}">{{$user->name}}</a>
-                  
+
                     @if ($user->unit_name != "")
                       <span class="nn">{{ $user->position. ' - ' .$user->unit_name  }}</span>
                     @else
                       <span class="nn">Đang cập nhật</span>
                     @endif
-                  
+
                 </p>
               </div>
             </div>
