@@ -29,6 +29,7 @@
               <div class="panel-body ">
                 <p>Video mô tả nhanh nội dung, quá trình học khóa học, giúp học sinh dễ dàng quyết định có nên học khóa học này hay không.</p>
                 <input type="hidden" id="course_id" value="{{$course->id}}"/>
+                {{--{{var_dump($streams)}}--}}
                 @if(isset($video))
                   @include('includes.partials.response_video_player', ['player_id' => 'video_preview_' . $video->id, 'cover_img' => $video->thumbnail_link('original'), 'stream_link' => $streams, 'autoplay' => false])
                 @endif

@@ -27,6 +27,7 @@ Route::group(['namespace' => 'Auth'], function ()
 	 **/
 	Route::group(['prefix' => 'app'], function () {
 		//Xử lý call back sau khi login qua facebook
+
 		Route::get('{provider}/callback', 'SocialiteAuthController@handleProviderCallback');
 	});
 

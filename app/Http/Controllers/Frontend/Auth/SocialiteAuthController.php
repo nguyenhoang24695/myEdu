@@ -25,6 +25,7 @@ class SocialiteAuthController extends Controller
     protected $user;
     public function __construct(AuthenticationContract $auth, CookieJar $cookieJar, UserContract $user)
     {
+
         $this->auth   = $auth;
         $this->cookie = $cookieJar;
         $this->user   = $user;
@@ -32,12 +33,13 @@ class SocialiteAuthController extends Controller
 
     public function handleProviderCallback($provider)
     {
+//        dd( Socialite::driver($provider)->stateless()->user());
         try {
-            $user = Socialite::driver($provider)->user();
+            $user = Socialite::driver($provider)->stateless()->user();
         } catch (\Exception $e) {
             return redirect()->route('home');
         }
-
+//        dd($user);
         $authUser = $this->findOrCreateUser($provider,$user);
 
         \Auth::login($authUser, true);

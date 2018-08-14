@@ -28,6 +28,7 @@ use FFMpeg\Media\Frame;
 use Illuminate\Contracts\Validation\ValidationException;
 use Illuminate\Http\Exception\HttpResponseException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\MessageBag;
 use League\Flysystem\Adapter\Local;
 
@@ -256,6 +257,7 @@ class LibraryController extends TeacherController
 
     public function addVideoIntro(Request $request){
 
+
         $course = Course::whereId($request->input('id', 0))->whereCouUserId(auth()->user()->id)->first();
 
         if(!$course){
@@ -265,9 +267,12 @@ class LibraryController extends TeacherController
 
         // lưu file
         if($request->isMethod('post')){
+
             if($request->hasFile('upload_file')){
+
                 $file = $request->file('upload_file');
                 $valid_file = MyStorage::defaultValidUploadFile($file, 'video');
+
                 if($valid_file['valid'] == false){
                     return response()->json(['success' => false, 'message' => $valid_file['message']]);
                 }
@@ -275,10 +280,11 @@ class LibraryController extends TeacherController
                 $disk_name = config('flysystem.default_video');
                 $file_name = md5(auth()->user()->id . time()) . '.' . $file->getClientOriginalExtension();
                 $file_path = getPathByDay('/cou_intro_video', 'now', $file_name);
-
+//                Log::log(1,$file_path);
                 $file_saved = MyStorage::saveUploadedFile($file, $disk_name, $file_path);
 
                 if($file_saved){
+
                     $course->update(['intro_video_path' => $file_path, 'intro_video_disk' => 'vod_myedu']);
                     $media = new Video();
                     $media->video_disk = $disk_name;
@@ -288,7 +294,9 @@ class LibraryController extends TeacherController
                     $media->vid_description = $file->getClientOriginalName();
                     $media->file_size = $file->getSize();
                     $media->file_type = $file->getMimeType();
+
                     if($media->save()){
+
                         return response()->json(['success' => true,
                             'media_id' => $media->id,
                             'edit_link' => route('teacher.build_course', ['id' => $request->id, 'action' => 'video_gioi_thieu'])]);

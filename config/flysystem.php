@@ -23,7 +23,7 @@ return [
     */
 
     'default' => 'local',
-    'default_video' => env('VIDEO_DEFAULT_DISK','local'),//vod_quochoc
+    'default_video' => 'local',//vod_quochoc
     'default_document' => 'local',
     'default_audio' => 'local',
     /*
@@ -122,7 +122,7 @@ return [
 
         'local' => [
             'driver'     => 'local',
-            'path'       => storage_path('app'),
+            'path'       => public_path(''),
             // 'visibility' => 'public',
             // 'eventable'  => true,
             // 'cache'      => 'foo'
